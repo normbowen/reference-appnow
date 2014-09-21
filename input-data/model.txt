@@ -1,0 +1,54 @@
+class User
+{
+	string FirstName;
+	string LastName;
+	string? Address;
+	string City;
+	string? County;
+	string State;
+	string Zip;
+	string Phone;
+	int Age;
+}
+class Country
+{
+	string Name;
+	string Code;
+	string? Region;
+}
+class OlympicMedal
+{
+	string Athlete;
+	int Age;
+	string Country;
+	int Year;
+	string Sport;
+	int Gold;
+	int Silver;
+	int Bronze;
+	int Total;
+}
+class Weather
+{
+	string Location;
+	int Year;
+	int Month;
+	int Day;
+	time Time;
+	decimal? Temperature;
+	int? RelHum;
+	decimal? Presure;
+	int? Hmdx;
+}
+class Exoplanet
+{
+	string Name;
+	decimal? Msini;
+	decimal? SemiMajorAxis;
+	decimal? OrbitalPeriod;
+	decimal? OrbitalExcentricity;
+	decimal? Om;
+	decimal? Velocity;
+	string? OrbitRef;
+	string? FirstRef;
+}
