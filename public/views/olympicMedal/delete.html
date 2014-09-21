@@ -1,0 +1,63 @@
+<div class="row">
+	<div class="col-md-4"></div>
+	<div class="col-md-4">
+		<form class="form-vertical text-left" name="editForm">
+			<h3 class="text-center">Delete olympicMedal</h3>
+			<fieldset ng-show="dataReceived">
+
+				<div class="form-group">
+					<label for="inputAthlete">Athlete</label>
+					<input id="inputAthlete" type="text" class="form-control" placeholder="Athlete" ng-model="olympicMedal.athlete" readonly />
+				</div>
+
+				<div class="form-group">
+					<label for="inputAge">Age</label>
+					<input id="inputAge" type="number" class="form-control" placeholder="Age" ng-model="olympicMedal.age" readonly />
+				</div>
+
+				<div class="form-group">
+					<label for="inputCountry">Country</label>
+					<input id="inputCountry" type="text" class="form-control" placeholder="Country" ng-model="olympicMedal.country" readonly />
+				</div>
+
+				<div class="form-group">
+					<label for="inputYear">Year</label>
+					<input id="inputYear" type="number" class="form-control" placeholder="Year" ng-model="olympicMedal.year" readonly />
+				</div>
+
+				<div class="form-group">
+					<label for="inputSport">Sport</label>
+					<input id="inputSport" type="text" class="form-control" placeholder="Sport" ng-model="olympicMedal.sport" readonly />
+				</div>
+
+				<div class="form-group">
+					<label for="inputGold">Gold</label>
+					<input id="inputGold" type="number" class="form-control" placeholder="Gold" ng-model="olympicMedal.gold" readonly />
+				</div>
+
+				<div class="form-group">
+					<label for="inputSilver">Silver</label>
+					<input id="inputSilver" type="number" class="form-control" placeholder="Silver" ng-model="olympicMedal.silver" readonly />
+				</div>
+
+				<div class="form-group">
+					<label for="inputBronze">Bronze</label>
+					<input id="inputBronze" type="number" class="form-control" placeholder="Bronze" ng-model="olympicMedal.bronze" readonly />
+				</div>
+
+				<div class="form-group">
+					<label for="inputTotal">Total</label>
+					<input id="inputTotal" type="number" class="form-control" placeholder="Total" ng-model="olympicMedal.total" readonly />
+				</div>
+
+				<div class="form-group">
+					<button class="btn btn-danger" ng-click="delete($event)" ng-disabled="editForm.$invalid" >Delete</button>
+					<button class="btn" ng-click="cancel($event)" >Cancel</button>
+				</div>
+			</fieldset>
+			<div ng-hide="dataReceived" class="loader"><img src="images/loader.gif" alt="Loading..." /></div>
+		</form>
+
+	</div>
+	<div class="col-md-4"></div>
+</div>

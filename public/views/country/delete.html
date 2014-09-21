@@ -1,0 +1,33 @@
+<div class="row">
+	<div class="col-md-4"></div>
+	<div class="col-md-4">
+		<form class="form-vertical text-left" name="editForm">
+			<h3 class="text-center">Delete country</h3>
+			<fieldset ng-show="dataReceived">
+
+				<div class="form-group">
+					<label for="inputName">Name</label>
+					<input id="inputName" type="text" class="form-control" placeholder="Name" ng-model="country.name" readonly />
+				</div>
+
+				<div class="form-group">
+					<label for="inputCode">Code</label>
+					<input id="inputCode" type="text" class="form-control" placeholder="Code" ng-model="country.code" readonly />
+				</div>
+
+				<div class="form-group">
+					<label for="inputRegion">Region</label>
+					<input id="inputRegion" type="text" class="form-control" placeholder="Region" ng-model="country.region" readonly />
+				</div>
+
+				<div class="form-group">
+					<button class="btn btn-danger" ng-click="delete($event)" ng-disabled="editForm.$invalid" >Delete</button>
+					<button class="btn" ng-click="cancel($event)" >Cancel</button>
+				</div>
+			</fieldset>
+			<div ng-hide="dataReceived" class="loader"><img src="images/loader.gif" alt="Loading..." /></div>
+		</form>
+
+	</div>
+	<div class="col-md-4"></div>
+</div>

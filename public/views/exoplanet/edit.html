@@ -1,0 +1,53 @@
+<div class="row">
+	<div class="col-md-4"></div>
+	<div class="col-md-4">
+		<form class="form-vertical text-left" name="editForm">
+			<h3 class="text-center">Edit exoplanet</h3>
+			<fieldset ng-show="dataReceived">
+				<div class="form-group">
+					<label for="inputName">Name</label>
+					<input id="inputName" type="text" class="form-control" placeholder="Name" ng-model="exoplanet.name" required autofocus />
+				</div>
+				<div class="form-group">
+					<label for="inputMsini">Msini</label>
+					<input id="inputMsini" type="number" class="form-control" placeholder="Msini" ng-model="exoplanet.msini" />
+				</div>
+				<div class="form-group">
+					<label for="inputSemiMajorAxis">SemiMajorAxis</label>
+					<input id="inputSemiMajorAxis" type="number" class="form-control" placeholder="SemiMajorAxis" ng-model="exoplanet.semiMajorAxis" />
+				</div>
+				<div class="form-group">
+					<label for="inputOrbitalPeriod">OrbitalPeriod</label>
+					<input id="inputOrbitalPeriod" type="number" class="form-control" placeholder="OrbitalPeriod" ng-model="exoplanet.orbitalPeriod" />
+				</div>
+				<div class="form-group">
+					<label for="inputOrbitalExcentricity">OrbitalExcentricity</label>
+					<input id="inputOrbitalExcentricity" type="number" class="form-control" placeholder="OrbitalExcentricity" ng-model="exoplanet.orbitalExcentricity" />
+				</div>
+				<div class="form-group">
+					<label for="inputOm">Om</label>
+					<input id="inputOm" type="number" class="form-control" placeholder="Om" ng-model="exoplanet.om" />
+				</div>
+				<div class="form-group">
+					<label for="inputVelocity">Velocity</label>
+					<input id="inputVelocity" type="number" class="form-control" placeholder="Velocity" ng-model="exoplanet.velocity" />
+				</div>
+				<div class="form-group">
+					<label for="inputOrbitRef">OrbitRef</label>
+					<input id="inputOrbitRef" type="text" class="form-control" placeholder="OrbitRef" ng-model="exoplanet.orbitRef" />
+				</div>
+				<div class="form-group">
+					<label for="inputFirstRef">FirstRef</label>
+					<input id="inputFirstRef" type="text" class="form-control" placeholder="FirstRef" ng-model="exoplanet.firstRef" />
+				</div>
+				<div class="form-group">
+					<button class="btn btn-primary" ng-click="save($event)" ng-disabled="editForm.$invalid" >Save</button>
+					<button class="btn" ng-click="cancel($event)" >Cancel</button>
+				</div>
+			</fieldset>
+			<div ng-hide="dataReceived" class="loader"><img src="images/loader.gif" alt="Loading..." /></div>
+		</form>
+
+	</div>
+	<div class="col-md-4"></div>
+</div>

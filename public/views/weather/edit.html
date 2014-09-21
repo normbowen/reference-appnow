@@ -1,0 +1,55 @@
+<div class="row">
+	<div class="col-md-4"></div>
+	<div class="col-md-4">
+		<form class="form-vertical text-left" name="editForm">
+			<h3 class="text-center">Edit weather</h3>
+			<fieldset ng-show="dataReceived">
+				<div class="form-group">
+					<label for="inputLocation">Location</label>
+					<input id="inputLocation" type="text" class="form-control" placeholder="Location" ng-model="weather.location" required autofocus />
+				</div>
+				<div class="form-group">
+					<label for="inputYear">Year</label>
+					<input id="inputYear" type="number" class="form-control" placeholder="Year" ng-model="weather.year" required />
+				</div>
+				<div class="form-group">
+					<label for="inputMonth">Month</label>
+					<input id="inputMonth" type="number" class="form-control" placeholder="Month" ng-model="weather.month" required />
+				</div>
+				<div class="form-group">
+					<label for="inputDay">Day</label>
+					<input id="inputDay" type="number" class="form-control" placeholder="Day" ng-model="weather.day" required />
+				</div>
+				<div class="form-group">
+					<label for="inputTime">Time</label>
+					<time-selector id="inputTime" 
+					               value="weather.time"
+					               opts=" required" />
+				</div>
+				<div class="form-group">
+					<label for="inputTemperature">Temperature</label>
+					<input id="inputTemperature" type="number" class="form-control" placeholder="Temperature" ng-model="weather.temperature" />
+				</div>
+				<div class="form-group">
+					<label for="inputRelHum">RelHum</label>
+					<input id="inputRelHum" type="number" class="form-control" placeholder="RelHum" ng-model="weather.relHum" />
+				</div>
+				<div class="form-group">
+					<label for="inputPresure">Presure</label>
+					<input id="inputPresure" type="number" class="form-control" placeholder="Presure" ng-model="weather.presure" />
+				</div>
+				<div class="form-group">
+					<label for="inputHmdx">Hmdx</label>
+					<input id="inputHmdx" type="number" class="form-control" placeholder="Hmdx" ng-model="weather.hmdx" />
+				</div>
+				<div class="form-group">
+					<button class="btn btn-primary" ng-click="save($event)" ng-disabled="editForm.$invalid" >Save</button>
+					<button class="btn" ng-click="cancel($event)" >Cancel</button>
+				</div>
+			</fieldset>
+			<div ng-hide="dataReceived" class="loader"><img src="images/loader.gif" alt="Loading..." /></div>
+		</form>
+
+	</div>
+	<div class="col-md-4"></div>
+</div>
