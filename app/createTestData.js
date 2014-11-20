@@ -3,8 +3,17 @@ var mongoose = require('mongoose');
 
 var models = require('./model');
 
-var dbName = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/DemoDb';
-mongoose.connect(dbName);
+if(process.env.VCAP_SERVICES){
+  var services = JSON.parse(process.env.VCAP_SERVICES);
+  var dbcreds = services['mongodb'][0].credentials;
+}
+
+if(dbcreds){
+  console.log(dbcreds);
+  mongoose.connect(dbcreds.host, dbcreds.db, dbcreds.port, {user: dbcreds.username, pass: dbcreds.password});
+}else{
+  mongoose.connect("localhost", "DemoDb", 27017);
+}
 
 
 // Clear the database of old data

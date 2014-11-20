@@ -1,0 +1,10 @@
+applications:
+- name: reference-appnow
+  mem: 256
+  services:
+    ${name}-mongo:
+      type: mongodb
+  stackato:
+    ignores:
+    - node_modules
+    - .git
